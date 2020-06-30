@@ -1,2 +1,8 @@
 <!--components/bottom-modal/bottom-modal.wxml-->
-<text>components/bottom-modal/bottom-modal.wxml</text>
+<view class="modal" hidden="{{!modalShow}}">
+  <view class="panel">
+      <i class="iconfont icon-shanchu1" bind:tap="onClose"></i>
+      <!-- slot插槽  具名插槽-->
+      <slot name="modal-content"></slot>
+  </view>
+</view>
