@@ -11,7 +11,7 @@
 		"newFeature": true,
 		"coverView": true,
 		"nodeModules": false,
-		"autoAudits": false,
+		"autoAudits": true,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"uglifyFileName": false,
@@ -67,6 +67,19 @@
 					"name": "pages/blog/blog",
 					"pathName": "pages/blog/blog",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
 					"scene": null
 				}
 			]
