@@ -3,7 +3,7 @@ const cloud = require('wx-server-sdk')
 
 cloud.init()
 
-// 云函数入口函数
+// 云函数入口函数P
 exports.main = async (event, context) => {
   const {
     OPENID

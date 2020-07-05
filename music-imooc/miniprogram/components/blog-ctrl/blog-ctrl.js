@@ -26,47 +26,44 @@ Component({
   methods: {
     onComment() {
       wx.getSetting({
-        success: (res) => {
-          if (res.authSetting["scope.userInfo"]) {
+        success: res => {
+          if (res.authSetting['scope.userInfo']) {
             wx.getUserInfo({
               success: (res) => {
-                userInfo = res.userInfo;
+                userInfo = res.userInfo
                 this.setData({
-                  modalShow: true,
-                });
+                  modalShow: true
+                })
               },
-            });
+            })
           } else {
             this.setData({
-              loginShow: true,
-            });
+              loginShow: true
+            })
           }
-        },
-      });
+        }
+      })
     },
     onLoginsuccess(event) {
-      userInfo = event.datail;
-      this.setData(
-        {
-          loginShow: false,
-        },
-        () => {
-          this.setData({
-            modalShow: true,
-          });
-        }
-      );
+      userInfo = event.datail
+      this.setData({
+        loginShow: false
+      }, () => {
+        this.setData({
+          modalShow: true
+        })
+      })
     },
     onLoginfail() {
       wx.showModal({
-        title: "授权用户才能进行评价",
-      });
+        title: '授权用户才能进行评价',
+      })
     },
     onInput(event) {
-      content = event.detail.value;
+      content = event.detail.value
     },
     onSend() {
-      console.log(userInfo);
+      console.log(userInfo)
       // 插入数据库
       if (content.trim() == '') {
         wx.showModal({
@@ -152,5 +149,5 @@ Component({
         })
       })
     },
-  },
-});
+  }
+})
