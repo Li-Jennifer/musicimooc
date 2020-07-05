@@ -139,7 +139,7 @@ Page({
       isPlaying: true
     })
   },
-  //保存播放历史
+  // 保存播放历史
   savePlayHistory() {
     const music = musiclist[nowPlayingIndex]
     const openid = app.globalData.openid
